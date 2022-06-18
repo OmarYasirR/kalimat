@@ -1,0 +1,67 @@
+
+.container .images {
+  background-color: #bd42922a;
+  width: fit-content;
+}
+.container .images .img-cont{
+  color: #53BF9D;
+  transition: 0.5s;
+}
+.container .images .img-cont.correct::after{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  font-size: 120px;
+  color: #53bf9dc2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+@media (max-width: 575px) {
+  .container .images .img-cont.correct::after{
+    font-size: 80px;
+  }
+}
+@media (min-width: 576px) {
+  .container .images .img-cont{
+    width: 135px;
+    height: 135px;
+  }
+}
+  @media (min-width: 992px) {
+    .container .images .img-cont{
+      min-width: 180px;
+      height: 180px;
+    }
+}
+.container .check{
+  background-color: #53BF9D;
+  transition: 0.1s;
+}
+.container .check.worng{
+  animation: worngAnswer 0.5s 2 ease;
+}
+.container .letters span {
+  background-color: #F94C66;
+
+}
+.container .submit{
+  background-color: #53BF9D;
+}
+.container .delt{
+  background-color: #53BF9D;
+}
+.container .delt i{
+  font-size: 24px;
+}
+@keyframes worngAnswer {
+  25%{
+    transform: translateX(30px);
+    background-color: #f3203f;
+  }
+  50%{
+    transform: translateX(-30px);
+    background-color: #f3203f;
+  }
+}
